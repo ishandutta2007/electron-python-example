@@ -3,4 +3,7 @@ api.spec
 node_modules/
 build/
 dist/
+env/
+env3/
 pycalcdist/
+pycalcdist3/

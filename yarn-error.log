@@ -1,0 +1,52 @@
+Arguments: 
+  /usr/local/Cellar/node/8.9.1/bin/node /Users/ishandutta2007/.yarn/bin/yarn.js
+
+PATH: 
+  /Users/ishandutta2007/development/flutter/bin:/Users/ishandutta2007/miniconda3/bin:/Users/ishandutta2007/google-cloud-sdk/bin:/Users/ishandutta2007/.yarn/bin:/Users/ishandutta2007/.config/yarn/global/node_modules/.bin:/Users/ishandutta2007/Library/apache-maven-3.5.0/bin:/usr/local/Cellar/mongodb/3.4.0/bin:/usr/local/mysql/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Users/ishandutta2007/Library/Android/sdk/tools:/Users/ishandutta2007/Library/Android/sdk/platform-tools:/usr/local/git/bin/:./node_modules/.bin:/Users/ishandutta2007/Library/Android/sdk/platform-tools/
+
+Yarn version: 
+  1.7.0
+
+Node version: 
+  8.9.1
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: write EADDRNOTAVAIL
+      at _errnoException (util.js:1024:11)
+      at WriteWrap.afterWrite [as oncomplete] (net.js:867:14)
+
+npm manifest: 
+  {
+    "name": "pretty-calculator",
+    "version": "1.0.0",
+    "description": "A minimal Electron and Python - based calculator ",
+    "main": "main.js",
+    "scripts": {
+      "start": "electron ."
+    },
+    "repository": "https://github.com/fyears/electron-python-example",
+    "keywords": [
+      "Electron",
+      "Python",
+      "zerorpc",
+      "demo"
+    ],
+    "author": "fyears",
+    "license": "MIT",
+    "dependencies": {
+      "zerorpc": "0.9.7"
+    },
+    "devDependencies": {
+      "electron": "^2.0.5",
+      "electron-packager": "12.1.0"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

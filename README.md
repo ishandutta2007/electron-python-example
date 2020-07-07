@@ -246,10 +246,17 @@ Then install things:
 ```bash
 # in the same shell as above!!!
 # because you want to make good use of the above environment variables
+brew install zmq
+export PKG_CONFIG_PATH=/usr/local/Cellar/zeromq/4.2.5/lib/pkgconfig/
+# Note: zeromq Version 4.2.5 above will need to be changed to whatever was latest the time when you installed it
+sudo visudo
+#and add
+bashDefaults env_keep += "PKG_CONFIG_PATH"
+```
 
+```bash
 # install everything based on the package.json
-npm install
-
+yarn
 # verify the electron binary and its version by opening it
 ./node_modules/.bin/electron
 ```
@@ -259,6 +266,29 @@ npm install
 ## core functions
 
 ### Python part
+
+```bash
+# If you are using python via pyenv like me, you might need to reinstalled with enabling shared to access xcode libs unless you had done that earlier.(Optional)
+sudo env PYTHON_CONFIGURE_OPTS="--enable-shared" CFLAGS="-I$(brew --prefix openssl)/include" LDFLAGS="-L$(brew --prefix openssl)/lib" pyenv install
+sudo pip install virtualenv
+
+# set up virtualenv
+sudo python -m virtualenv env3
+source env3/bin/activate
+
+#instal all dependencies
+sudo pip install -r pycalc3/requirements.txt
+
+# set up virtualenv
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/Users/ishandutta2007/Documents/Projects/electron-python-example/env3/lib/python3.5/
+
+sudo pyinstaller pycalc3/api.py --distpath pycalcdist3 --hidden-import=pkg_resources
+rm -rf build/
+rm -rf api.spec
+
+ls pycalcdist3/api/
+sudo open pycalcdist3/api/api
+```
 
 We want to build up a ZeroMQ server in Python end.
 

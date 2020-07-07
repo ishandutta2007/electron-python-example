@@ -6,5 +6,6 @@ greenlet==0.4.14
 macholib==1.10
 msgpack-python==0.5.6
 pefile==2017.11.5
+PyInstaller==3.4.dev0+g7817d3fa
 pyzmq==17.1.0
 zerorpc==0.6.1
